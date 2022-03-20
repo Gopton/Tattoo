@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gopton' Tattoo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./resources/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./resources/css/index.css">
+    <link rel="stylesheet" href="./resources/css/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-content">
+        <img class="logo-img" src="./resources/img/main-logo.png" alt="">
+        <ul class="main-nav">
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Studios</a></li>
+        </ul>
+        <img onclick="toggleMobileNav()" class="burger-icon" src="./resources/img/menu.png" alt="">
+      </div>
+      <div class="mobile-nav-container">
+        <ul class="mobile-nav">
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Studios</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="main">
+      <div class="hero">
+        <div class="hero-content">
+          <p id="ff" class="hero-text">Gopton's Tattoo Studio</p>
+          <div class="hero-profile">
+            <div class="hero-img pr"></div>
+            <p class="profile-text">Gopton the developer</p>
+          </div>
+        </div>
+      </div>
+      <div class="masters-section">
+        <div class="masters-content">
+          <p id="masters-h1">Our Masters</p>
+          <div class="break-line"></div>
+          <div class="goptons">
+            <div class="gopton-container">
+              <div class="gopton-img bg1 pr"></div>
+              <div class="gopton-text">
+                <p class="gopton-h">Gopton the drunkest</p>
+                <p class="gopton-desc">This master drinks a lot. If you want a great beautiful tattoo from a 
+                  proffesional, then you definetely need to find someone except Gopton 
+                  the drunkest.</p>
+              </div>
+            </div>
+            <div class="gopton-container">
+              <div class="gopton-img bg2 pr"></div>
+              <div class="gopton-text">
+                <p class="gopton-h">Gopton the trappiest</p>
+                <p class="gopton-desc">This master traps a lot. Most people know this trap lord as Bobz. It’s very 
+                  hard and almost impossible to meet Bobz sober. If you want high quality 
+                  tattoo, then you should forget everything about Bobz.</p>
+              </div>
+            </div>
+            <div class="gopton-container">
+              <div class="gopton-img bg3 pr"></div>
+              <div class="gopton-text">
+                <p class="gopton-h">Gopton the dumbest</p>
+                <p class="gopton-desc">That nigga suck at everything. From minesweeper to chess.  I don’t actually
+                  think that you could find someone more stupid than this gopton. If you always 
+                  wanted the worst tattoo in your life - this is your master!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="email-section">
+        <div class="email-content">
+          <div class="email-main">
+            <p class="email-text">Leave your email for free consultation</p>
+            <div class="form">
+              <input placeholder="mamadogz@example.com" type="text">
+              <button>Submit</button>
+            </div>
+          </div>
+          <div class="email-img-container">
+            <img src="./resources/img/email-icon.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer-content">
+          <p class="footer-text">Designed and developed by Aleksey Rozin</p>
+          <div class="footer-icons">
+            <div class="icon-container"><a target="_blank" href="https://github.com/AlekseyRozin"><img src="./resources/img/github.png" alt=""></a></div>
+            <div class="icon-container"><a target="_blank" href="https://www.instagram.com/povoricita/"><img src="./resources/img/instagram.png" alt=""></a></div>
+            <div class="icon-container"><a target="_blank" href="https://www.facebook.com/profile.php?id=100010963331593"><img src="./resources/img/facebook.png" alt=""></a></div>
+            <div class="icon-container"><a target="_blank" href="https://twitter.com/aleksey_rozin"><img src="./resources/img/twitter.png" alt=""></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var isScrolling = false;
+      const heroText = document.querySelector(".hero-text");
+      let nav = document.querySelector(".mobile-nav-container");
+      let header = document.querySelector(".header");
+      window.addEventListener("scroll", throttleScroll, false);
+      function throttleScroll(e) {
+          if (isScrolling == false ) {
+              window.requestAnimationFrame(function() {
+                dealWithScrolling(e);
+                isScrolling = false;
+              });
+          }
+          isScrolling = true;
+      }   
+        
+      function dealWithScrolling(e) {
+          let lightness = Math.random()*60 + 20;
+          let fullStyle = `5px 5px 5px hsl(300, 100%, ${lightness}%)`;
+          heroText.style.textShadow = fullStyle;
+      }
+
+      function toggleMobileNav(){
+        if (nav.style.display === "flex") {
+          nav.style.display = "none";
+          header.style.padding = "0";
+        } else {
+          nav.style.display = "flex";
+          header.style.padding = "1rem 0";
+        }
+      }
+    </script>
+  </body>
+</html>
