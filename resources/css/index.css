@@ -147,7 +147,7 @@ html,body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("/../img/hero-bg.jpg");
+    background-image: url("resources/img/hero-bg.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -210,7 +210,7 @@ html,body{
     width: 17rem;
     height: 17rem;
     border-radius: 50%;
-    background-image: url("/../img/master-photo.jpg");
+    background-image: url("resources/img/master-photo.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -335,13 +335,13 @@ html,body{
 }
 
 .bg1{
-    background-image: url("/../img/master1.jpg");
+    background-image: url("resources/img/master1.png");
 }
 .bg2{
-    background-image: url("/../img/master2.jpg");
+    background-image: url("resources/img/master2.png");
 }
 .bg3{
-    background-image: url("/../img/master3.jpg");
+    background-image: url("resources/img/master3.png");
 }
 
 .gopton-text{
